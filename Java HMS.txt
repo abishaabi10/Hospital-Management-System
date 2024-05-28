@@ -1,0 +1,672 @@
+//Main.java
+import pacdoctordetails.Doctordetails;
+import D1_Generalphsician.Generalphsician;
+import java.util.*;
+import D2_Cordiologiest.Cordiologiest;
+import D3_Dentist.Dentist;
+import D4_Optomestrists.Optomestrists;
+import D5_Dermatologiest.Dermatologiest;
+class Main
+{
+	public static void main(String agrs[])
+	{
+		while(true)
+		{
+			
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Welcom to the hospital managemengt system");
+			System.out.println("-----------------------------------------");
+			System.out.println("There are five specialist in the hospital");
+			System.out.println("Doctor 1 :Generalphsician");
+			System.out.println("Doctor 2 :Cordiologiest");
+			System.out.println("Doctor 3 :Dentist");
+			System.out.println("Doctor 4 :Optomestrists");
+			System.out.println("Doctor 5 :Dermatologiest");//skin
+			System.out.println("Doctor 6 :Exit");
+			System.out.println("");
+			
+		
+			Doctordetails Doctordetailsobj=new Doctordetails();
+			
+				
+				System.out.print("Enter the number to choose the Doctor : ");
+				int no=sc.nextInt();
+				
+				if(no==1)
+				{
+				
+				Doctordetailsobj.Method_2();
+				System.out.print("Which day to see the doctor? : ");
+				int Getday1=sc.nextInt();
+				
+				if(Getday1 == 1||Getday1 == 2||Getday1 == 3||Getday1 == 6)
+				{
+					
+					Generalphsician Generalphsician_obj=new Generalphsician();
+					Generalphsician_obj.Method1_Generalphsician();//call Generalphsician
+					
+						
+				}
+				else if(Getday1 ==4||Getday1 ==5||Getday1==7)
+				{
+					System.out.println("Day " + Getday1 + " The Generalphsician doctor is absent . ");
+					System.out.println("Doctor Available days : Monday , Tuesday , Wednesday,Saturday");
+					System.out.println("Doctor Unavailable days : Thuresday , Friday , Sunday ");
+					System.out.println("");
+				}						
+				else
+				{	
+					System.out.println("Invalid Day.....Please Enter the correct day");
+				}
+			}
+			else if(no==2)
+			{
+				Doctordetailsobj.Method_2();
+				System.out.print("Which day to see the doctor? : ");
+				int Getday2=sc.nextInt();
+				if(Getday2 == 2||Getday2 == 3||Getday2 == 6)
+				{
+				Cordiologiest Cordiologiest_obj=new Cordiologiest();
+				Cordiologiest_obj.Method1_Cordiologiest();//call Cordiologiest
+				//count2--;
+				}
+				else if(Getday2 ==4||Getday2 ==5||Getday2==7||Getday2 == 1)
+				{
+				System.out.println("Day " + Getday2 + " The Cordiologiest doctor is Absent . ");
+				System.out.println("Doctor Available days :  Tuesday , Wednesday,Saturday");
+				System.out.println("Doctor Unavailable days : Thuresday , Friday , Sunday ,Monday ");
+				System.out.println("");
+				}						
+				else
+				{	
+				System.out.println("Invalid Day.....Please enter the correct day");
+				}
+			}
+			else if(no==3)
+				{
+					Doctordetailsobj.Method_2();
+				System.out.print("Which day to see the doctor? : ");
+				int Getday3=sc.nextInt();
+				
+				if(Getday3 == 1||Getday3 == 2||Getday3 == 3||Getday3 == 6)
+				{
+				Dentist Dentist_obj=new Dentist();
+				Dentist_obj.Method1_Dentist();//call Cordiologiest
+				}
+				else if(Getday3 ==4||Getday3 ==5||Getday3==7)
+				{
+					System.out.println("Day " + Getday3 + " The Dentist doctor is absent . ");
+					System.out.println("Doctor Available days : Monday , Tuesday , Wednesday,Saturday");
+					System.out.println("Doctor Unavailable days : Thuresday , Friday , Sunday ");
+					System.out.println("");
+				}						
+				else
+				{	
+					System.out.println("Invalid Day.....Please enter the correct day");
+				}
+				}
+				else if(no==4)
+				{
+				Doctordetailsobj.Method_2();
+				System.out.print("Which day to see the doctor? : ");
+				int Getday4=sc.nextInt();
+				
+				if(Getday4 == 2||Getday4 == 3||Getday4 == 5||Getday4 == 7)
+				{
+					Optomestrists Optomestrists_obj=new Optomestrists();
+					Optomestrists_obj.Method1_Optomestrists();//call Optomestrists package
+				}
+				else if(Getday4 ==1||Getday4 ==4||Getday4==6)
+				{
+					System.out.println("Day " + Getday4 + " The Dentist doctor is absent . ");
+					System.out.println("Doctor Available days : Tuesday , Wednesday, Friday ");
+					System.out.println("Doctor Unavailable days : Sunday , Thuresday , Saturday");
+					System.out.println("");
+				}						
+				else
+				{	
+					System.out.println("Invalid Day.....Please enter the correct day");
+				}
+				
+				
+				//count3--;
+			}
+			
+			else if(no==5)
+				{
+				Doctordetailsobj.Method_2();
+				System.out.print("Which day to see the doctor? : ");
+				int Getday5=sc.nextInt();
+				
+				if(Getday5 == 2||Getday5 == 3||Getday5 == 5||Getday5 == 7||Getday5==6)
+				{
+					Dermatologiest Dermatologiest_obj=new Dermatologiest();
+					Dermatologiest_obj.Method1_Dermatologiest();//call Dermatologiest package
+				}
+				else if(Getday5 ==1||Getday5 ==4)
+				{
+					System.out.println("Day " + Getday5 + " The Dentist doctor is Absent . ");
+					System.out.println("Doctor Available days : Tuesday , Wednesday, Friday , Saturday");
+					System.out.println("Doctor Unavailable days : Sunday , Thuresday ");
+					System.out.println("");
+				}						
+				else
+				{	
+					System.out.println("Invalid Day.....Please Enter the correct day");
+				}
+				
+				
+				//count3--;
+			}
+			
+			else
+			{
+				System.out.println(".............Exit...........");
+				break;
+			}
+		
+		
+	}
+	}
+
+
+}
+
+
+
+
+//Doctordetails.java
+package pacdoctordetails;
+import java.io.*;
+import java.util.*;
+
+public class Doctordetails 
+{
+	
+    Scanner sc = new Scanner(System.in);
+    private String name;
+    private int age;
+
+    public void setName(String name)
+	{
+        this.name = name;
+    }
+
+    public String getName()
+	{
+        return name;
+    }
+
+    public void setAge(int age) 
+	{
+        this.age = age;
+    }
+
+    public int getAge() 
+	{
+        return age;
+    }
+
+    public void Method_1() 
+	{
+        System.out.print("Enter the patient Name:");
+        String name = sc.next();
+        System.out.print("Enter the patient Age:");
+        int age = sc.nextInt();
+        System.out.println("");
+        setName(name);
+        setAge(age);
+
+    }
+	 public void Method_2() 
+	{
+		String[]week={"1 : Sunday","2 : Monday","3 : Tuesday","4 : wednesday","5 : Thuresday","6 : Friday","7 : saturday"};
+		for (int i = 0; i < week.length; i++) 
+		{
+			String day = week[i];
+			System.out.println(day);
+		}
+		
+		
+	}
+	 public void Method_3() 
+	{
+		System.out.println("Doctor 1 :Book the token");
+		System.out.println("Doctor 2 :view the booked token");
+		System.out.println("Doctor 3 :Delete the token");
+		System.out.println("Doctor 4 :Exit");
+	}
+	
+	
+}
+
+
+	
+
+//Generalphsician.java
+package D1_Generalphsician;
+import pacdoctordetails.Doctordetails;
+import java.io.*;
+import java.util.*;
+
+public class Generalphsician
+ {
+	static int count1=5;
+	static ArrayList<Doctordetails> li1 = new ArrayList<>();
+	public void Method1_Generalphsician() 
+	{
+	
+		Scanner sc = new Scanner(System.in);
+		Doctordetails obj1=new Doctordetails();
+		obj1.Method_3();
+		while(true)
+		{
+		System.out.print("Enter your choice : ");
+		int choice = sc.nextInt();
+		switch(choice)
+		{
+		case 1:
+		if((count1>0)&&(0<count1))
+		{
+			Doctordetails obj=new Doctordetails();
+			obj.Method_1();
+			li1.add(obj);
+			count1--;
+			
+		}
+		else
+		{
+			System.out.println("All Tokens are full to meet a Generalphsician Doctor");
+		}
+				
+		break;
+		case 2:
+		
+		if(li1.size()>0)
+		{
+		for (int i = 0; i < li1.size(); i++) 
+		{
+			Doctordetails j = li1.get(i);
+			System.out.println(j.getName() +" 's token Number is "+ (i+1));
+			System.out.println("Name: " + j.getName());
+			System.out.println(" Age: " + j.getAge());
+		}
+		}
+		else
+		{
+			System.out.println("The Token list is empty");
+		}
+		break;
+		case 3:
+		System.out.print("Enter patient Token to delete: ");
+		int deleteToken = sc.nextInt();
+		if((5<deleteToken))
+		{
+			System.out.println("Invalid Token number.");
+		}
+		else if((li1.size()<deleteToken))
+		{
+			System.out.println("The Token is Empty");
+				
+		}
+		else //if((deleteToken>=1)&&(deleteToken<=5))
+		{
+			Doctordetails R = li1.remove(deleteToken-1);//remove is inbuild function
+			System.out.println("Token Number is deleted successfully: ");
+		} 
+	
+		break;
+		case 4:
+			System.out.println("...........Exit........");
+			return;
+			
+			default:
+			break;
+		}
+	}
+		
+	   
+		
+    }
+   
+}
+
+
+//Cordiologiest.java
+
+
+package D2_Cordiologiest;
+import java.io.*;
+import java.util.*;
+import pacdoctordetails.Doctordetails;
+public class Cordiologiest 
+{
+	static int count2=5;
+	static ArrayList<Doctordetails> li2 = new ArrayList<>();
+	public void Method1_Cordiologiest()
+	{
+		Scanner sc2 = new Scanner(System.in);
+		
+		Doctordetails Doctordetailso=new Doctordetails();
+		Doctordetailso.Method_3();
+		while(true)
+			{
+			System.out.print("Enter your choice : ");
+			int choice = sc2.nextInt();
+			switch(choice)
+			{
+			case 1:
+			if((count2>0)&&(0<count2))
+			{
+			Doctordetails obj=new Doctordetails();
+			obj.Method_1();
+			li2.add(obj);
+			count2--;
+			}
+			else
+			{
+			System.out.println("All Tokens are full to meet a Cordiologiest Doctor");
+			}
+			break;
+			case 2:
+			
+			if(li2.size()>0)
+			{
+		
+			for (int i = 0; i < li2.size(); i++) 
+			{
+				Doctordetails j = li2.get(i);
+				System.out.println(j.getName() +" 's token Number is "+ (i+1));
+				System.out.println("Name: " + j.getName());
+				System.out.println(" Age: " + j.getAge());
+			}
+			}
+			else
+			{
+			System.out.println("The Token list is empty");
+			}
+			break;
+			case 3:
+			
+				System.out.print("Enter patient Token to delete: ");
+				int deleteToken = sc2.nextInt();
+				if((5<deleteToken))
+				{
+					System.out.println("Invalid Token number.");
+				}
+				else if((li2.size()<deleteToken))
+				{
+					System.out.println("The Token is Empty");
+						
+				}
+				else 
+				{
+					Doctordetails R = li2.remove(deleteToken-1);//remove is inbuild function
+					System.out.println("Token Number is deleted successfully: ");
+				} 
+				break;
+				
+				
+				case 4:
+				System.out.println("......Exit........");
+				return;
+				
+				default:
+				break;
+			}
+		}
+	   
+		
+    }
+   
+}
+	
+//Dentist.java
+package D3_Dentist;
+import java.io.*;
+import java.util.*;
+import pacdoctordetails.Doctordetails;
+public class Dentist 
+{
+	static int count3=5;
+	static ArrayList<Doctordetails> li3 = new ArrayList<>();
+	public void Method1_Dentist()
+	{
+		Scanner sc3 = new Scanner(System.in);
+		Doctordetails Doctordetailso=new Doctordetails();
+		Doctordetailso.Method_3();
+		while(true)
+		{
+			System.out.print("Enter your choice : ");
+			int choice = sc3.nextInt();
+			switch(choice)
+			{
+				case 1:
+				if((count3>0)&&(0<count3))
+				{
+					Doctordetails obj=new Doctordetails();
+					obj.Method_1();
+					li3.add(obj);
+					count3--;
+					//obj.Method_4(count1);
+				}
+				else
+				{
+					System.out.println("All Tokens are full to meet a Generalphsician Doctor");
+				}
+			
+				break;
+				case 2:
+				
+				for (int i = 0; i < li3.size(); i++) 
+				{
+					Doctordetails j = li3.get(i);
+					System.out.println(j.getName() +" 's token Number is "+ (i+1));
+					System.out.println("Name: " + j.getName());
+					System.out.println(" Age: " + j.getAge());
+				}
+				break;
+				case 3:
+					System.out.print("Enter patient Token to delete: ");
+					int deleteToken = sc3.nextInt();
+					if((5<deleteToken))
+					{
+						System.out.println("Invalid Token number.");
+					}
+					else if((li3.size()<deleteToken))
+					{
+						System.out.println("The Token is Empty");
+							
+					}
+					else 
+					{
+						Doctordetails R = li3.remove(deleteToken-1);//remove is inbuild function
+						System.out.println("Token Number is deleted successfully: ");
+					} 
+				break;
+					
+					
+					case 4:
+					System.out.println("Exit........");
+					return;
+					
+					default:
+					break;
+				}
+			}
+	   
+		
+    }
+   
+}
+//Optomestrists.java
+package D4_Optomestrists;
+import java.io.*;
+import java.util.*;
+import pacdoctordetails.Doctordetails;
+public class Optomestrists 
+{
+	static int count4=5;
+	static ArrayList<Doctordetails> li4 = new ArrayList<>();
+	public void Method1_Optomestrists()
+	{
+		Scanner sc4 = new Scanner(System.in);
+		Doctordetails Doctordetailso=new Doctordetails();
+		Doctordetailso.Method_3();
+		while(true)
+			{
+			System.out.println("Enter your choice : ");
+			int choice = sc4.nextInt();
+			switch(choice)
+			{
+			case 1:
+			if((count4>0)&&(0<count4))
+			{
+			Doctordetails obj=new Doctordetails();
+			obj.Method_1();
+			li4.add(obj);
+			count4--;
+			}
+			else
+			{
+			System.out.println("All Tokens are full to meet a Generalphsician Doctor");
+			}
+			break;
+			case 2:
+			
+			if(li4.size()>0)
+			{
+			
+			for (int i = 0; i < li4.size(); i++) 
+			{
+				
+				Doctordetails j = li4.get(i);
+				System.out.println(j.getName() +" 's token Number is "+ (i+1));
+				System.out.println("Name: " + j.getName());
+				System.out.println(" Age: " + j.getAge());
+			}
+			}
+			else
+			{
+			System.out.println("The Token list is empty");
+			}
+			break;
+			case 3:
+			
+			System.out.print("Enter patient Token to delete: ");
+			int deleteToken = sc4.nextInt();
+			if((5<deleteToken))
+			{
+				System.out.println("Invalid Token number.");
+			}
+			else if((li4.size()<deleteToken))
+			{
+				System.out.println("The Token is Empty");
+					
+			}
+			else 
+			{
+				Doctordetails R = li4.remove(deleteToken-1);//remove is inbuild function
+				System.out.println("Token Number is deleted successfully: ");
+			} 
+				break;
+				
+				
+				case 4:
+				System.out.println("..........Exit........");
+				return;
+				
+				default:
+				break;
+			}
+		}
+	   
+		
+    }
+   
+}
+//Dermatologiest.java
+package D5_Dermatologiest;
+import java.io.*;
+import java.util.*;
+import pacdoctordetails.Doctordetails;
+public class Dermatologiest 
+{
+	static int count5=5;
+	static ArrayList<Doctordetails> li5 = new ArrayList<>();
+	public void Method1_Dermatologiest()
+	{
+		Scanner sc5 = new Scanner(System.in);
+		Doctordetails Doctordetailso=new Doctordetails();
+		Doctordetailso.Method_3();
+		while(true)
+			{
+			System.out.println("Enter your choice : ");
+			int choice = sc5.nextInt();
+			switch(choice)
+			{
+			case 1:
+			if((count5>0)&&(0<count5))
+			{
+			Doctordetails obj=new Doctordetails();
+			obj.Method_1();
+			li5.add(obj);
+			count5--;
+			}
+			else
+			{
+			System.out.println("All Tokens are full to meet a Generalphsician Doctor");
+			}
+			break;
+			case 2:
+			
+			if(li5.size()>0)
+			{
+			
+			for (int i = 0; i < li5.size(); i++) 
+			{
+				Doctordetails j = li5.get(i);
+				System.out.println(j.getName() +" 's token Number is "+ (i+1));
+				System.out.println("Name: " + j.getName());
+				System.out.println(" Age: " + j.getAge());
+			}
+			}
+			else
+			{
+			System.out.println("The Token list is empty");
+			}
+			break;
+			case 3:
+			
+				System.out.print("Enter patient Token to delete: ");
+				int deleteToken = sc5.nextInt();
+				if((5<deleteToken))
+				{
+					System.out.println("Invalid Token number.");
+				}
+				else if((li5.size()<deleteToken))
+				{
+					System.out.println("The Token is Empty");
+						
+				}
+				else //if((deleteToken>=1)&&(deleteToken<=5))
+				{
+					Doctordetails R = li5.remove(deleteToken-1);//remove is inbuild function
+					System.out.println("Token Number is deleted successfully: ");
+				} 
+				break;
+				
+				
+				case 4:
+				System.out.println("Exit........");
+				return;
+				
+				default:
+				break;
+			}
+		}
+	   
+		
+    }
+   
+}
